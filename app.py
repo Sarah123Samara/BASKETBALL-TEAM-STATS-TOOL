@@ -1,6 +1,5 @@
 import copy
 from constants import PLAYERS
-from constants import TEAMS
 
 
 # Function to clean player data
@@ -18,7 +17,6 @@ def balance_teams(players, teams):
     experienced_players = [p for p in players if p["experience"]]
     inexperienced_players = [p for p in players if not p["experience"]]
 
-    num_players_team = len(players) // len(teams)
     num_experienced_per_team = len(experienced_players) // len(teams)
     num_inexperienced_per_team = len(inexperienced_players) // len(teams)
 
